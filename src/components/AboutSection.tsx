@@ -23,7 +23,7 @@ export function AboutSection() {
             <CarouselItem>
               <h3 className="text-xl font-semibold mb-4 text-white">Missão</h3>
               <div className="flex items-center">
-                <img src="/public/dama_escola.jpg" alt="Imagem de dama" className="w-64 rounded-lg" />
+                <img src="/dama_escola.jpg" alt="Imagem de dama" className="w-64 rounded-lg" />
                 <p className="w-1/2 ml-4 text-white text-left">
                 Promover e desenvolver o jogo de dama no Maranhão, fomentando a participação e a excelência em todas as faixas etárias e níveis de habilidade. Buscamos criar um ambiente inclusivo, onde jogadores novatos e experientes possam aprender, competir e compartilhar o amor pelo jogo. Além de promover campeonatos locais e regionais, trabalhamos para integrar o esporte às comunidades, escolas e espaços públicos.
                 </p>
@@ -56,21 +56,6 @@ export function AboutSection() {
           <CarouselNext />
         </Carousel>
 
-        {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
-            <h3 className="text-xl font-semibold mb-4">Missão</h3>
-            <img src="/dama_escola.jpg" alt="" />
-            <p>Promover e desenvolver o jogo de dama no Maranhão, fomentando a participação e a excelência.</p>
-          </div>
-          <div>
-            <h3 className="text-xl font-semibold mb-4">História</h3>
-            <p>Fundada em 1950, a federação Maranhense de dama celebra décadas de impulso ao esporte no estado.</p>
-          </div>
-          <div>
-            <h3 className="text-xl font-semibold mb-4">Valores</h3>
-            <p>Paixão, integridade, trabalho em equipe e excelência guiam nossas ações.</p>
-          </div>
-        </div> */}
       </div>
     </section>
   );
