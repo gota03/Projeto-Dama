@@ -4,7 +4,7 @@ export function Header() {
       <div className="w-full h-6 flex items-center justify-between px-6">
         <div className="flex items-center">
           <img
-            src="src/assets/Bandeira_do_Maranhão.png"
+            src="/Bandeira_do_Maranhão.png"
             alt="Bandeira do Maranhão"
             className="w-12 mr-4"
           />
