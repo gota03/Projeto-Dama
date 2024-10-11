@@ -1,25 +1,22 @@
 import './App.css'
+import { Login } from './components/Login';
+import { Footer } from './components/Footer';
 import { Header } from './components/Header';
-import { Footer } from './components/FooterSection';
-import { HeroSection } from './components/HeroSection';
-import { AboutSection } from './components/AboutSection';
-import { EventsSection } from './components/EventsSection';
-import { ContactSection } from './components/ContactSection';
-import { MembershipSection } from './components/MemberShipSection';
+import { HomePage } from './components/HomePage';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
-
   return (
     <div>
-      <Header />
-      <HeroSection/>
-      <AboutSection/>
-      <EventsSection/>
-      <MembershipSection/>
-      <ContactSection/>
-      <Footer/>
+      <Router>
+        <Header/>
+        <Routes>
+          <Route path='/' element={<HomePage/>}/>
+          <Route path="/user" element={<Login/>} />
+        </Routes>
+        <Footer/>
+      </Router>
     </div>
   )
 }
-
 export default App
