@@ -5,7 +5,7 @@ export function HeroSection() {
     }}>
       <div className="container mx-auto px-6 text-center">
         <h1 className="text-4xl font-bold text-white mb-6 roboto">Celebrando a tradição do jogo de dama</h1>
-        <p className="text-lg text-slate-200 roboto">A federação de dama do Maranhão promove a excelência e o desenvolvimento do jogo de damas em todas as categorias.</p>
+        <p className="text-lg text-slate-200 roboto">A federação de damas do Maranhão promove a excelência e o desenvolvimento do jogo de damas em todas as categorias.</p>
       </div>
     </section>
   );

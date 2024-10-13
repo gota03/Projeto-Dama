@@ -4,11 +4,11 @@ export function Header() {
       <div className="w-full h-6 flex items-center justify-between px-6">
         <div className="flex items-center">
           <img
-            src="/Bandeira_do_Maranhão.png"
+            src="/logo_federacao.svg"
             alt="Bandeira do Maranhão"
-            className="w-12 mr-4"
+            className="w-10 mr-4"
           />
-          <div className="text-lg font-bold roboto">Federação de dama do Maranhão</div>
+          <div className="text-lg font-bold roboto">Federação de damas do Maranhão</div>
         </div>
 
         <nav>
