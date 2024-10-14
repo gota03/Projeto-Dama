@@ -1,5 +1,5 @@
-import { Login } from "./Login";
-import { Register } from "./Register";
+import { UserLogin } from "./Login";
+import { UserRegister } from "./Register";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 export function User() {
@@ -26,8 +26,8 @@ export function User() {
 
                     </TabsList>
 
-                    <Login />
-                    <Register/>
+                    <UserLogin/>
+                    <UserRegister/>
                     
                 </Tabs>
             </div>

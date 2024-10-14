@@ -59,7 +59,7 @@ class UserRegister:
 
             self.check_fields(data)
 
-            name = data['name']
+            name = data['name'].upper()
             cpf = data['cpf']
 
             existing_user = self.check_cpf_exists(cpf)
@@ -70,10 +70,10 @@ class UserRegister:
             ddd = data['phone'][0:2]
             phone = data['phone'][2:]
             cep = data['cep']
-            email = data['email']
+            email = data['email'].lower()
             password = data['password']
 
-            hashed_password = Cryptography.register_user(password)
+            hashed_password = Cryptography.hash_password(password)
 
             address_info = self.search_cep(cep)
             if 'message' in address_info:

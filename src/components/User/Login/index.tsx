@@ -11,14 +11,12 @@ interface FormData {
     password: string
 }
 
-export function Login() {
+export function UserLogin() {
 
     const [formData, setFormData] = useState<FormData>({
         cpf: "",
         password: ""
     })
-
-    const [isSubmitting, setIsSubmitting] = useState(false)
     
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setFormData({
@@ -39,14 +37,12 @@ export function Login() {
             return
         }
 
-        setIsSubmitting(true)
         try {
-            const response = await axios.post('http://127.0.0.1:5000/user/login', formData, {
+            await axios.post('http://127.0.0.1:5000/user/login', formData, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
             })
-            console.log(response.data)
             toast.success("Login feito com sucesso!", {
                 position: "bottom-right"
             })
@@ -67,8 +63,6 @@ export function Login() {
                 toast.error('Erro inesperado.', { position: "bottom-right" })
             }
             
-        } finally {
-            setIsSubmitting(false)
         }
     }
 

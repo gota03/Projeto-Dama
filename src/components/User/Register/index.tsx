@@ -17,7 +17,7 @@ interface FormData {
     password: string;
 }
 
-export function Register() {
+export function UserRegister() {
 
     const [formData, setFormData] = useState<FormData>({
         name: "",
@@ -54,7 +54,7 @@ export function Register() {
                     'Content-Type': 'application/json'
                 }
             })
-            toast.success("Cadastrado feito com sucesso!", {
+            toast.success("Cadastro feito com sucesso!", {
                 position: "bottom-right"
             })
     
