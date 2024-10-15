@@ -25,7 +25,7 @@ class TournamentManager:
             self.db.ensure_connection()
             cursor = self.db.connection.cursor()
             cursor.execute("""
-                INSERT INTO tournament (tournament_name, date, location, qtd_participants, registration_price)
+                INSERT INTO tournament (tournament_name, date_tournament, location, qtd_participants, registration_price)
                 VALUES (%s, %s, %s, %s, %s)
             """, (tournament_name, date, location, qtd_participants, registration_price))
             self.db.connection.commit()

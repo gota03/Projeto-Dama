@@ -1,8 +1,8 @@
-import { CardTitle, Card, CardContent, CardHeader } from "../../ui/card"
+import { useEffect } from "react"
 import { Button } from "../../ui/button"
 import { useNavigate } from "react-router-dom"
-import { useEffect } from "react"
 import { useAdminContext } from '../AdminContext'
+import { CardTitle, Card, CardContent, CardHeader } from "../../ui/card"
 
 export default function AdminDashboard() {
   const navigate = useNavigate()
@@ -55,7 +55,14 @@ export default function AdminDashboard() {
             <CardHeader>
               <CardTitle className="roboto font-medium">Criar novo adm</CardTitle>
             </CardHeader>
-            <CardContent className="roboto">Crie um novo adm para gerenciar o sistema</CardContent>
+            <CardContent className="roboto">Crie um novo adm para gerenciar o sistema.</CardContent>
+          </Card>
+
+          <Card className="hover:shadow-lg cursor-pointer" onClick={() => navigate("/view-tournaments")}>
+            <CardHeader>
+              <CardTitle className="roboto font-medium">Visualizar torneios</CardTitle>
+            </CardHeader>
+            <CardContent className="roboto">Visualize e edite os torneios.</CardContent>
           </Card>
         </div>
       </main>

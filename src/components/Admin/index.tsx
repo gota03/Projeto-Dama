@@ -1,6 +1,5 @@
 import AdminLogin from "./Login"
 
-
 export function Admin() {
 
     return (

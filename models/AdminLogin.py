@@ -1,11 +1,10 @@
-from flask_cors import CORS
+from datetime import timedelta
 from models.Database import Database
 from flask import Flask, request, jsonify
 from models.Cryptography import Cryptography
 from flask_jwt_extended import (
     JWTManager, create_access_token, jwt_required, get_jwt_identity
 )
-from datetime import timedelta
 
 class AdminLogin:
 
@@ -14,7 +13,6 @@ class AdminLogin:
         app.config["JWT_SECRET_KEY"] = "sua_chave_super_secreta"
         app.config["JWT_ACCESS_TOKEN_EXPIRES"] = timedelta(hours=1)
         self.jwt = JWTManager(app)
-        CORS(app)
         app.add_url_rule('/admin/login', 'login_admin', self.login_admin, methods=['POST'])
         app.add_url_rule('/admin/protected', 'protected', self.protected, methods=['GET'])
 

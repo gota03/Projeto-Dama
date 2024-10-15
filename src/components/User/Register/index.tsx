@@ -49,7 +49,7 @@ export function UserRegister() {
         }
 
         try {
-            await axios.post('http://127.0.0.1:5000/user/register', formData, {
+            await axios.post('http://10.9.60.51:5000/user/register', formData, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
