@@ -6,7 +6,6 @@ from models.AdminLogin import AdminLogin
 from models.UserRegister import UserRegister
 from models.AdminRegister import AdminRegister
 from models.TournamentManager import TournamentManager
-from models.ViewTournaments import ViewTournaments
 
 app = Flask(__name__)
 CORS(app)
@@ -19,7 +18,6 @@ admin_login = AdminLogin(app, db)
 admin_register = AdminRegister(app, db)
 
 tournament_manager = TournamentManager(app, db)
-tournament_view = ViewTournaments(app, db)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)

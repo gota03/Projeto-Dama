@@ -6,9 +6,7 @@ import { AdminProvider } from './components/Admin/AdminContext'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
-  <React.StrictMode>
     <AdminProvider>
       <App />
     </AdminProvider>
-  </React.StrictMode>
 )
