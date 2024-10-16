@@ -10,6 +10,7 @@ import {
 import DeleteConfirmationDialog from '../../DeleteDialog';
 import EditTournamentDialog from '../../EditDialog';
 import { Tournament } from '@/types/tournament';
+import api from '@/service/api';
 
 export const ViewTournament = () => {
   const [tournaments, setTournaments] = useState<Tournament[]>([]);
@@ -23,7 +24,7 @@ export const ViewTournament = () => {
 
   const fetchTournaments = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/view-tournaments');
+      const response = await api.get('/view-tournaments');
       setTournaments(response.data);
       setIsLoading(false);
     } catch (error) {
@@ -34,7 +35,7 @@ export const ViewTournament = () => {
 
   const handleDeleteTournament = async (tournamentId: number) => {
     try {
-      await axios.delete(`http://localhost:5000/tournaments/${tournamentId}`);
+      await api.delete(`/tournaments/${tournamentId}`);
       setTournaments(tournaments.filter(tournament => tournament.id !== tournamentId));
     } catch (error) {
       console.error("Erro ao deletar torneio:", error);

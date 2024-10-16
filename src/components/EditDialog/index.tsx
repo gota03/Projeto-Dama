@@ -12,6 +12,7 @@ import { MdEdit } from "react-icons/md"
 import { DialogTrigger } from '@radix-ui/react-dialog'
 import axios from 'axios'
 import { Tournament } from '@/types/tournament'
+import api from '@/service/api'
 
 interface EditTournamentDialogProps {
   tournament: Tournament;
@@ -42,7 +43,7 @@ const EditTournamentDialog: React.FC<EditTournamentDialogProps> = ({ tournament,
 
   const handleSave = async () => {
     try {
-      await axios.put(`http://localhost:5000/tournaments/${editedTournament.id}`, {
+      await api.put(`/tournaments/${editedTournament.id}`, {
         tournamentName: editedTournament.Name,
         date: editedTournament.Date,
         location: editedTournament.Locale,

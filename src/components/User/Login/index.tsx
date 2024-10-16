@@ -5,6 +5,7 @@ import { isCPF } from 'validation-br'
 import { Button } from "../../ui/button"
 import {TabsContent} from "@/components/ui/tabs"
 import {toast, ToastContainer} from 'react-toastify'
+import api from '@/service/api'
 
 interface FormData {
     cpf: string
@@ -38,7 +39,7 @@ export function UserLogin() {
         }
 
         try {
-            await axios.post('http://10.9.60.51:5000/user/login', formData, {
+            await api.post('/user/login', formData, {
                 headers: {
                     'Content-Type': 'application/json'
                 }

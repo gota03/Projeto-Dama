@@ -3,6 +3,7 @@ import { isCPF } from 'validation-br'
 import React, { useState } from 'react'
 import { Button } from "../../ui/button"
 import { toast, ToastContainer } from 'react-toastify'
+import api from '@/service/api'
 
 interface Admin {
     cpf: string
@@ -38,7 +39,7 @@ const AdminRegister = () => {
         }
         
         try {
-            const response = await axios.post('http://localhost:5000/create-adm', adminData, {
+            const response = await api.post('/create-adm', adminData, {
                 headers: {
                     'Content-Type': 'application/json',
                 },

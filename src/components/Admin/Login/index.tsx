@@ -3,6 +3,7 @@ import { toast, ToastContainer } from 'react-toastify'
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAdminContext } from '../AdminContext'
+import api from '@/service/api'
 
 const AdminLogin: React.FC = () => {
   const { setAdminName, setToken } = useAdminContext()
@@ -13,7 +14,7 @@ const AdminLogin: React.FC = () => {
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      await axios.post('http://10.9.60.51:5000/admin/login', {
+      await api.post('/admin/login', {
         cpf,
         password,
       }).then((response) => {

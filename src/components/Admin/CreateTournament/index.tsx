@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useState } from 'react'
 import { Button } from "../../ui/button"
 import { toast, ToastContainer } from 'react-toastify'
+import api from '@/service/api'
 
 interface Tournament {
     tournamentName: string
@@ -32,7 +33,7 @@ const CreateTournament = () => {
         e.preventDefault()
         
         try {
-            const response = await axios.post('http://localhost:5000/tournaments', tournamentData, {
+            const response = await api.post('/tournaments', tournamentData, {
                 headers: {
                     'Content-Type': 'application/json',
                 },

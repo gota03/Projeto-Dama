@@ -6,6 +6,7 @@ import {Button} from '../../ui/button'
 import 'react-toastify/dist/ReactToastify.css' 
 import { TabsContent} from '@/components/ui/tabs'
 import {toast, ToastContainer} from 'react-toastify'
+import api from '@/service/api'
 
 interface FormData {
     name: string;
@@ -49,7 +50,7 @@ export function UserRegister() {
         }
 
         try {
-            await axios.post('http://10.9.60.51:5000/user/register', formData, {
+            await api.post('/user/register', formData, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
