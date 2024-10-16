@@ -1,6 +1,5 @@
 import './index.css'
 import App from './App'
-import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { AdminProvider } from './components/Admin/AdminContext'
 

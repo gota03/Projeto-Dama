@@ -1,4 +1,3 @@
-import axios from 'axios'
 import { toast, ToastContainer } from 'react-toastify'
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'

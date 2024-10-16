@@ -1,4 +1,3 @@
-import axios from 'axios'
 import React, { useState } from 'react'
 import { Button } from "../../ui/button"
 import { toast, ToastContainer } from 'react-toastify'

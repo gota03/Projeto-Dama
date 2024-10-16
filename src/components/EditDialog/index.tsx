@@ -10,7 +10,6 @@ import {
 } from "@/components/ui/dialog"
 import { MdEdit } from "react-icons/md"
 import { DialogTrigger } from '@radix-ui/react-dialog'
-import axios from 'axios'
 import { Tournament } from '@/types/tournament'
 import api from '@/service/api'
 
